@@ -1,5 +1,36 @@
 body {
     background-color: black;
+    overflow: hidden;
+}
+
+.snow-flake {
+    position: absolute;
+    color: white;
+    filter: blur(1px);
+    top: -50px;
+    animation: snow-fall linear infinite;
+}
+
+@keyframes snow-fall {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateX(50px)  translateY(25vh);
+    }
+
+    50% {
+        transform: translateY(50vh);
+    }
+
+    75% {
+        transform: translateX(-50px) translateY(75vh);
+    }
+
+    100% {
+        transform: translateY(calc(100vh + 50px));
+    }
 }
 
 /* heart1 */
@@ -37,8 +68,9 @@ body {
     position: absolute;
     top: 30%;
     left: 50%;
-    margin-top: -150px;
+    margin-top: -190px;
     margin-left: -90px;
+    z-index: 2;
 }
 
 /* heart2 */
@@ -193,4 +225,71 @@ body {
     left: 68%;
     margin-top: -115px;
     margin-left: -70px;
+}
+
+/* tree */
+#tree {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 1;
+}
+
+.tree_branch {
+    border-style: solid;
+    border-color: transparent;
+    width: 0;
+    clear: both;
+    border-bottom-color: #005000;
+    border-radius: 20%;
+}
+
+#top1 {
+    border-width: 110px;
+    position: absolute;
+    margin: -130px 0 0 -105px;
+    border-bottom-width: 130px;
+}
+
+#top2 {
+    border-width: 160px;
+    position: absolute;
+    margin: -90px 0 0 -155px;
+    border-bottom-width: 180px;
+}
+
+#pile {
+    width: 50px;
+    height: 60px;
+    background-color: #541300;
+    margin: 250px 0 0 -20px;
+}
+
+#flowerpot {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+#flowerpot_head {
+    width: 80px;
+    border: 5px solid #963C07;
+    border-radius: 30% 30% 30% 30%;
+    margin: 217px 0 0 -55px;
+}
+
+#flowerpot_body {
+    /*border-top-width: 100px;
+    border-bottom-widthdth: 50px;
+    height: 100px;
+    background-color: #963C07;
+
+
+    border-radius: 0 0 20% 20%;*/
+    border-top: 80px solid #963C07;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 40px;
+    margin: 2px 0 0 -50px;
 }
